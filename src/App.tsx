@@ -1,5 +1,6 @@
 import { NavLink, Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/Home'
+import FilmsPage from './pages/Films'
 
 export default function App() {
   return (
@@ -53,6 +54,7 @@ export default function App() {
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '40px 20px' }}>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/films" element={<FilmsPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
