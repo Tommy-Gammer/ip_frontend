@@ -44,16 +44,6 @@ export default function HomePage() {
     setSelectedActor(fullActor);
   }
 
-  // Rating style helper
-  function getRatingStyle(rating) {
-    if (rating === 'G') return { backgroundColor: '#dcfce7', color: '#166534' };
-    if (rating === 'PG') return { backgroundColor: '#dbeafe', color: '#1e40af' };
-    if (rating === 'PG-13') return { backgroundColor: '#fef3c7', color: '#92400e' };
-    if (rating === 'R') return { backgroundColor: '#fed7aa', color: '#ea580c' };
-    if (rating === 'NC-17') return { backgroundColor: '#fecaca', color: '#dc2626' };
-    return { backgroundColor: '#f3f4f6', color: '#374151' };
-  }
-
   return (
     <div style={{ 
         margin: 0, padding: 0, width: '100%', boxSizing: 'border-box'
@@ -218,33 +208,24 @@ export default function HomePage() {
                   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '15px', fontSize: '14px', marginBottom: '20px' }}>
                     <div>
                       <span style={{ color: '#6b7280' }}>Year:</span>
-                      <p style={{ color: '#3730a3', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.release_year}</p>
+                      <p style={{ color: '#374151', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.release_year}</p>
                     </div>
                     <div>
                       <span style={{ color: '#6b7280' }}>Rating:</span>
-                      <p style={{ fontWeight: '600', margin: '5px 0 0 0' }}>
-                        <span style={{
-                          ...getRatingStyle(selectedFilm.rating),
-                          padding: '2px 6px',
-                          borderRadius: '12px',
-                          fontSize: '12px'
-                        }}>
-                          {selectedFilm.rating}
-                        </span>
-                      </p>
+                      <p style={{ color: '#374151', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.rating}</p>
                     </div>
                     <div>
                       <span style={{ color: '#6b7280' }}>Length:</span>
-                      <p style={{ color: '#3730a3', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.length} min</p>
+                      <p style={{ color: '#374151', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.length} min</p>
                     </div>
                     <div>
                       <span style={{ color: '#6b7280' }}>Category:</span>
-                      <p style={{ color: '#3730a3', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.category}</p>
+                      <p style={{ color: '#374151', fontWeight: '600', margin: '5px 0 0 0' }}>{selectedFilm.category}</p>
                     </div>
                   </div>
                   
                   <div style={{ backgroundColor: '#e0e7ff', padding: '15px', borderRadius: '8px', textAlign: 'center' }}>
-                    <span style={{ color: '#3730a3', fontWeight: '600' }}>
+                    <span style={{ color: '#374151', fontWeight: '600' }}>
                       {selectedFilm.rental_count} Total Rentals
                     </span>
                   </div>
