@@ -153,7 +153,7 @@ export default function FilmsPage() {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <h3 style={{ margin: 0, fontWeight: 800, color: "#111827" }}>{detail.title}</h3>
               <button onClick={() => setShowModal(false)} style={{
-                border: "1px solid #e5e7eb", background: "white", borderRadius: 8, padding: "6px 10px", cursor: "pointer", fontWeight: 600
+                border: "1px solid #000000ff", color: "#000000ff", background: "white", borderRadius: 8, padding: "6px 10px", cursor: "pointer", fontWeight: 600
               }}>Close</button>
             </div>
 
